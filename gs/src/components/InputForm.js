@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const InputForm = ()=>{
+const InputForm = (props)=>{
     const [name, changeName] = useState('')
     const [email, changeEmail] = useState('')
     const [mobile, changeMobile] = useState('')
@@ -31,6 +31,7 @@ const InputForm = ()=>{
         changeName('')
         changeEmail('')
         changeMobile('')
+        props.onSubmitInput(data)
     }
 
     return (
