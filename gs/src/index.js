@@ -10,6 +10,13 @@ import Item from './components/Item';
 import InputForm from './components/InputForm';
 
 const RootComponent = () => {
+
+  console.log("fetch data and log")
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      
+
   // store all submitted items
   const [items, setItems] = useState([]);
 
